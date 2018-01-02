@@ -3,10 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+
+        <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+
+        {% block stylesheets %}
+          <script src="{{ asset('build/manifest.js') }}"></script>
+          <link rel="stylesheet" href="{{ asset('build/style.css') }}">
+        {% endblock %}
+
+        <style type="text/css">
+            {% block styles %}{% endblock %}
+        </style>
     </head>
-    <body>
+
+    {% set current_path = app.request.get('_route') %}
+    <body class="{{ current_path }}">
+
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascripts %}
+            <script src="{{ asset('build/vendor.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('build/app.js') }}"></script>
+        {% endblock %}
     </body>
 </html>
