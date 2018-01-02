@@ -11,8 +11,6 @@ class DefaultController
     */
     public function home()
     {
-        $number = mt_rand(0, 100);
-
         return new Response(
             '<html><body>Far&amp;Out Studio</body></html>'
         );

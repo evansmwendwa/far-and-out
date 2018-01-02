@@ -1,0 +1,22 @@
+{
+  "name": "far",
+  "version": "1.0.0",
+  "description": "Repo for the farandout.studio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evansmwendwa/far-and-out.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evansmwendwa/far-and-out/issues"
+  },
+  "homepage": "https://github.com/evansmwendwa/far-and-out#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.1"
+  }
+}
