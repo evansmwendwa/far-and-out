@@ -1,0 +1,7 @@
+body {
+    font-family: graphik, sans-serif;
+}
+.container-fluid {
+    margin: 0 auto;
+    @include clearfix;
+}

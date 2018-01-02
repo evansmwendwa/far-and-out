@@ -1,0 +1,28 @@
+.homepage {
+    .panel {
+        padding: 170px 65px;
+
+        &.centered {
+            text-align: center;
+        }
+
+        &.intro {
+            background: url("#{$img-path}/fno.png") center no-repeat;
+
+            h1 {
+                font-weight: 500;
+                font-size: 48px;
+            }
+        }
+
+        &.narrow {
+            padding: 50px;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 300;
+                color: #363636;
+            }
+        }
+    }
+}

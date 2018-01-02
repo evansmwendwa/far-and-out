@@ -16,8 +16,7 @@
   transform: translateY(-50%);
 }
 
-/* provided by bootstrap */
-/*
+
 @mixin clearfix() {
     &:before,
     &:after {
@@ -28,7 +27,6 @@
       clear: both;
     }
 }
-*/
 
 @mixin border-box {
     -moz-box-sizing: border-box;
