@@ -21,5 +21,5 @@ class Project extends BaseEntity
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    protected $id;
 }
