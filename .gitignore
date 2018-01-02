@@ -10,3 +10,6 @@
 /node_modules/
 /public/build/
 ###< symfony/webpack-encore-pack ###
+
+# custom ignores
+.DS_Store
