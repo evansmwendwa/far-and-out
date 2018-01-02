@@ -1,0 +1,163 @@
+@mixin font-face ($family, $filename, $weight, $style:normal)
+{
+    @font-face {
+        font-family:'#{$family}';
+    	src: url('#{$fonts-path}/#{$family}/#{$filename}.woff') format('woff');
+    	font-weight: $weight;
+    	font-style: $style;
+    }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* provided by bootstrap */
+/*
+@mixin clearfix() {
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+*/
+
+@mixin border-box {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin transitions {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+@mixin rotate($degs) {
+    -ms-transform: rotate($degs); /* IE 9 */
+   -webkit-transform: rotate($degs); /* Chrome, Safari, Opera */
+   transform: rotate($degs);
+}
+
+@mixin animate($duration) {
+    transition: all $duration linear;
+}
+
+@mixin scale($ratio) {
+    transform:scale($ratio);
+}
+
+@mixin background($filename, $position: center, $repeat: no-repeat) {
+    background: url('#{$img-path}/#{$filename}') $position $repeat;
+}
+
+@mixin grayscale($amount: 100%) {
+    -webkit-filter: grayscale($amount);
+    filter: grayscale($amount);
+}
+
+@mixin skew($deg) {
+    transform: skew($deg);
+}
+
+@mixin placeholder($color) {
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+}
+
+@mixin inlinelist {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    li{
+        display: inline-block;
+    }
+}
+
+@mixin flatlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin fancyline($color:#fff, $width:165px) {
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 6px solid $color;
+        border-right: 2px solid transparent;
+        height: 0;
+        width: 20px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: $width;
+        height: 1px;
+        border-bottom: 1px solid $color;
+    }
+}
+
+@mixin fancy-v-line($color:#fff, $height:165px) {
+    &:before {
+        content: "";
+        position: absolute;
+        top: $height/2;
+        right: 0;
+        margin-top:-10px;
+        border-right: 6px solid $color;
+        border-top: 2px solid transparent;
+        height: 20px;
+        width: 0;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 1px;
+        height: $height;
+        border-right: 1px solid $color;
+    }
+}
+
+@mixin square($length, $radius:0) {
+    display: block;
+    width: $length;
+    height: $length;
+    line-height: $length;
+    text-align: center;
+    border-radius: $radius;
+    padding: 0;
+    overflow: hidden;
+}
+
+@mixin noselect {
+    -webkit-touch-callout: none;
+    user-select: none;
+}
