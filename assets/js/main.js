@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import 'jquery-match-height';
-import 'bootstrap';
+//import 'bootstrap';
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -18,7 +18,7 @@ function updateQueryStringParameter(uri, key, value) {
 }
 
 $(document).ready(function(){
-
+  
 });
 
 window.onload = function(e) {

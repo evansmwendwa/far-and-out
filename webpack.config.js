@@ -7,12 +7,11 @@ Encore
     .setPublicPath('/build')
     .cleanupOutputBeforeBuild()
     .enableSourceMaps(!Encore.isProduction())
-
-    // uncomment to create hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
     // uncomment to define the assets of the project
     .addEntry('app', './assets/js/main.js')
+    .addEntry('admin', './assets/js/admin.js')
 
     // split shared code
     .createSharedEntry('vendor', [
@@ -21,7 +20,7 @@ Encore
 
     // will output as web/build/global.css
     .addStyleEntry('style', './assets/scss/index.scss')
-    .addStyleEntry('filechooser', './assets/scss/filechooser.scss')
+    .addStyleEntry('editor', './assets/scss/editor.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()
