@@ -1,0 +1,24 @@
+easy_admin:
+  entities:
+
+    Project:
+      class: App\Entity\Project
+      label: Projects
+
+      list:
+        menu:
+        fields:
+          - id
+          - published
+          - title
+          - { property: thumbnail, label: Image, type: image }
+          - { property: updatedAt, format: 'M d, Y' }
+          - { property: createdAt, format: 'M d, Y' }
+
+      form: {
+        fields:
+          - title
+          - { property: slug, type_options: { required: false }, help: 'Leave slug blank to have it generated from title' }
+          - { property: thumbnail, type: Evans\FilepickerBundle\Form\Type\FilepickerType }
+          - { property: image, type: Evans\FilepickerBundle\Form\Type\FilepickerType }
+          #- { property: article, type: ckeditor }

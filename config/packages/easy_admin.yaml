@@ -1,6 +1,22 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+  site_name: 'Far &amp; Beyond'
+  list:
+    actions:
+      - { name: show, css_class: 'btn btn-xs btn-default', icon: eye, label:  }
+      - { name: edit, css_class: 'btn btn-xs btn-default', icon: edit, label:  }
+      - { name: delete, css_class: 'btn btn-xs btn-danger', icon: trash-o, label:  }
+
+  design:
+    brand_color: '#1ABC9C'
+    form_theme: vertical
+
+    menu:
+      - { entity: Project, icon: wordpress }
+
+  formats:
+    date: d/m/Y
+    time: 'H:i'
+    datetime: 'd/m/Y H:i:s'
+
+imports:
+  - resource: easyadmin/project.yaml
