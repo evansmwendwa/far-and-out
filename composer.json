@@ -61,7 +61,7 @@
     "extra": {
         "symfony": {
             "id": "01C1M91PEQRWB5TST97N69XVGK",
-            "allow-contrib": false
+            "allow-contrib": "true"
         }
     }
 }
