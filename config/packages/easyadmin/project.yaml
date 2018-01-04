@@ -15,10 +15,10 @@ easy_admin:
           - { property: updatedAt, format: 'M d, Y' }
           - { property: createdAt, format: 'M d, Y' }
 
-      form: {
+      form:
         fields:
           - title
           - { property: slug, type_options: { required: false }, help: 'Leave slug blank to have it generated from title' }
-          - { property: thumbnail, type: Evans\FilepickerBundle\Form\Type\FilepickerType }
-          - { property: image, type: Evans\FilepickerBundle\Form\Type\FilepickerType }
-          #- { property: article, type: ckeditor }
+          - { property: thumbnail}
+          - { property: image}
+          - article
