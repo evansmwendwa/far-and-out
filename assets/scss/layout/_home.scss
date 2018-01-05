@@ -138,9 +138,10 @@
     display: block;
     text-decoration: none;
     color: #000;
+    @include animate(.2s);
 
     &:hover {
-      color: #c7b299;
+      color: darken(#c7b299, 13%);
     }
   }
 
