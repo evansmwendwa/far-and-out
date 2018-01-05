@@ -18,7 +18,20 @@ function updateQueryStringParameter(uri, key, value) {
 }
 
 $(document).ready(function(){
-  
+  let menuOpen = false;
+
+  $('.hamburger').click(function() {
+    if(menuOpen) {
+      $(this).removeClass('is-active');
+      menuOpen = false;
+      // close the menu
+    } else {
+      $(this).addClass('is-active');
+      menuOpen = true;
+      // open the menu
+    }
+
+  })
 });
 
 window.onload = function(e) {

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        
+
         <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
 
         {% block stylesheets %}
@@ -19,6 +19,19 @@
 
     {% set current_path = app.request.get('_route') %}
     <body class="{{ current_path }}">
+
+        <header>
+          <a href="{{ path('app_default_home') }}" class="logo">
+            <img src="{{ asset('images/logo.svg') }}" alt="">
+          </a>
+
+          <div class="hamburger hamburger--slider">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+
+        </header>
 
         {% block body %}{% endblock %}
 
