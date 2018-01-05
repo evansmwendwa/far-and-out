@@ -37,9 +37,11 @@
 
         <footer>
           <div class="container">
-            &copy; {{ "now"|date("Y") }} Far&amp;Out Studio 
+            &copy; {{ "now"|date("Y") }} Far&amp;Out Studio
           </div>
         </footer>
+
+        {% include 'sections/menu.html.twig' %}
 
         {% block javascripts %}
             <script src="{{ asset('build/vendor.js') }}"></script>

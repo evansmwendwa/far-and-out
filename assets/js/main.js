@@ -24,10 +24,12 @@ $(document).ready(function(){
     if(menuOpen) {
       $(this).removeClass('is-active');
       menuOpen = false;
+      $('.fullmenu, header').removeClass('menu-active');
       // close the menu
     } else {
       $(this).addClass('is-active');
       menuOpen = true;
+      $('.fullmenu, header').addClass('menu-active');
       // open the menu
     }
 

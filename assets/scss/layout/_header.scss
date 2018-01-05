@@ -8,6 +8,15 @@ header {
   padding: 20px;
   background: #fff;
   z-index: 900;
+  @include animate(.25s);
+
+  &.menu-active {
+    background: #000;
+
+    img {
+      filter: grayscale(100%) contrast(0) brightness(100);
+    }
+  }
 
   .logo {
     display: block;

@@ -76,15 +76,16 @@
 .hamburger {
     &.is-active{
         .hamburger-inner {
+            background-color: #fff;
             &::after {
                 width: $hamburger-layer-width;
                 left:auto;
                 right: auto;
+                background-color: #fff;
             }
             &::before{
-
+              background-color: #fff;
             }
         }
     }
-
 }
