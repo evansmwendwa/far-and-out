@@ -184,9 +184,10 @@
     border-radius: 50%;
     text-decoration: none;
     margin-bottom: 30px;
+    @include animate(.2s);
 
     &:hover {
-      background: lighten(#000, 10%);
+      line-height: $box-height - 20px;
       color: #c7b299;
     }
   }
