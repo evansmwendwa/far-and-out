@@ -9,13 +9,18 @@ easy_admin:
   design:
     brand_color: '#1ABC9C'
     form_theme: vertical
+    templates:
+      edit: 'filechooser/edit.html.twig'
+      new: 'filechooser/new.html.twig'
     assets:
       css:
         - 'https://localhost:8080/build/editor.css'
+        - '/filechooser/css/style.css'
       js:
         - 'https://localhost:8080/build/manifest.js'
         - 'https://localhost:8080/build/vendor.js'
         - 'https://localhost:8080/build/admin.js'
+        - '/filechooser/js/picker.js'
 
     menu:
       - { entity: Project, icon: wordpress }

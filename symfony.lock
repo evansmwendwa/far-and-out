@@ -68,6 +68,15 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "jms/metadata": {
+        "version": "1.6.0"
+    },
+    "jms/parser-lib": {
+        "version": "1.0.0"
+    },
+    "jms/serializer": {
+        "version": "1.10.0"
+    },
     "ocramius/package-versions": {
         "version": "1.2.0"
     },
@@ -76,6 +85,12 @@
     },
     "pagerfanta/pagerfanta": {
         "version": "v1.0.5"
+    },
+    "phpcollection/phpcollection": {
+        "version": "0.5.0"
+    },
+    "phpoption/phpoption": {
+        "version": "1.5.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -274,6 +289,9 @@
     },
     "symfony/yaml": {
         "version": "v4.0.2"
+    },
+    "tightenco/collect": {
+        "version": "v5.5.27"
     },
     "twig/extensions": {
         "version": "1.0",

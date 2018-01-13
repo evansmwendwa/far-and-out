@@ -39,8 +39,11 @@
     "@ckeditor/ckeditor5-paragraph": "^1.0.0-alpha.2",
     "@ckeditor/ckeditor5-upload": "^1.0.0-alpha.2",
     "bootstrap": "^4.0.0-beta.3",
+    "css-loader": "^0.28.8",
     "jquery": "^3.2.1",
     "jquery-match-height": "^0.7.2",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.19.1",
     "tether": "^1.4.3"
   }
 }

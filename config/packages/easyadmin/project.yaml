@@ -19,6 +19,6 @@ easy_admin:
         fields:
           - title
           - { property: slug, type_options: { required: false }, help: 'Leave slug blank to have it generated from title' }
-          - { property: thumbnail}
+          - { property: 'thumbnail', type: 'App\Form\Type\FilepickerType'}
           - { property: image}
           - article
