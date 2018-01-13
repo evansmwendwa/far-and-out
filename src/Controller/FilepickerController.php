@@ -27,6 +27,6 @@ class FilepickerController extends AbstractController
 
         $uploadedFiles = $chooser->upload($files);
 
-        return $serializer->JsonResponse(['file' => $uploadedFiles]);
+        return $serializer->JsonResponse(['files' => $uploadedFiles]);
     }
 }
