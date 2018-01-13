@@ -13,3 +13,4 @@
 
 # custom ignores
 .DS_Store
+public/uploads
