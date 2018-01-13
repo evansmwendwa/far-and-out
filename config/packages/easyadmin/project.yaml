@@ -11,6 +11,8 @@ easy_admin:
           - id
           - published
           - title
+          - category
+          - companyName
           - { property: thumbnail, label: Image, type: image }
           - { property: updatedAt, format: 'M d, Y' }
           - { property: createdAt, format: 'M d, Y' }
@@ -22,3 +24,7 @@ easy_admin:
           - { property: 'thumbnail', type: 'App\Form\Type\FilepickerType'}
           - { property: 'image', type: 'App\Form\Type\FilepickerType'}
           - article
+          - category
+          - companyName
+          - published
+          - publishedAt
