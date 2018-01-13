@@ -2,6 +2,7 @@
 namespace App\Traits;
 
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Utils\Utility;
 
 trait SlugTrait {
 
