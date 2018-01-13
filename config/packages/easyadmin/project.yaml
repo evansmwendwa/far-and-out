@@ -20,5 +20,5 @@ easy_admin:
           - title
           - { property: slug, type_options: { required: false }, help: 'Leave slug blank to have it generated from title' }
           - { property: 'thumbnail', type: 'App\Form\Type\FilepickerType'}
-          - { property: image}
+          - { property: 'image', type: 'App\Form\Type\FilepickerType'}
           - article
