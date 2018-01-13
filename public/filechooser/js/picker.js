@@ -207,49 +207,53 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     const uploadInput = document.querySelector('.picker-uploader input[type=file]');
+    if(uploadInput) {
+        uploadInput.addEventListener('change', (e) => {
+            if(filePicker.busy) return;
 
-    uploadInput.addEventListener('change', (e) => {
-        if(filePicker.busy) return;
+            const files = e.currentTarget.files;
 
-        const files = e.currentTarget.files;
+            if (files.length) {
+                filePicker.showMessage('Please wait..');
+                filePicker.busy = true;
 
-        if (files.length) {
-            filePicker.showMessage('Please wait..');
-            filePicker.busy = true;
-
-            filePicker.upload({
-                data: [],
-                files: files
-            }, (e) => {
-                if (e.lengthComputable) {
-                    let percentComplete = e.loaded / e.total;
-                    filePicker.showMessage(percentComplete + '%');
-                }
-            }, (e) => {
-                filePicker.busy = false;
-                filePicker.clearMessage();
-                filePicker.loadFiles(true);
-            }, (e) => {
-                filePicker.showMessage('File upload error!');
-                filePicker.busy = false;
-            }, (e) => {
-                filePicker.clearMessage();
-                filePicker.busy = false;
-            });
-        }
-    });
+                filePicker.upload({
+                    data: [],
+                    files: files
+                }, (e) => {
+                    if (e.lengthComputable) {
+                        let percentComplete = e.loaded / e.total;
+                        filePicker.showMessage(percentComplete + '%');
+                    }
+                }, (e) => {
+                    filePicker.busy = false;
+                    filePicker.clearMessage();
+                    filePicker.loadFiles(true);
+                }, (e) => {
+                    filePicker.showMessage('File upload error!');
+                    filePicker.busy = false;
+                }, (e) => {
+                    filePicker.clearMessage();
+                    filePicker.busy = false;
+                });
+            }
+        });
+    }
 
     const uploadButton = document.querySelector('.picker-upload-trigger');
-
-    uploadButton.onclick = (e) => {
-        if (!filePicker.busy) {
-            uploadInput.click();
+    if(uploadButton) {
+        uploadButton.onclick = (e) => {
+            if (!filePicker.busy) {
+                uploadInput.click();
+            }
         }
     }
 
     const refreshBtn = document.querySelector('.btn-refresh');
-    refreshBtn.onclick = (e) => {
-        filePicker.loadFiles(true);
+    if(refreshBtn) {
+        refreshBtn.onclick = (e) => {
+            filePicker.loadFiles(true);
+        }
     }
 
 });
